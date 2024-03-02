@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flower Garden</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            background-color: #e4f7f6;
+        }
+
+        #gallery {
+            text-align: center;
+            padding: 20px;
+        }
+
+        h1 {
+            color: #297373;
+        }
+
+        .flower {
+            margin-top: 20px;
+            font-size: 50px;
+            color: #ff85a2;
+        }
+
+        p {
+            color: #297373;
+        }
+
+        #scroll-down {
+            margin-top: 30px;
+            color: #297373;
+            font-size: 24px;
+            cursor: pointer;
+        }
+
+        #video-container {
+            margin-top: 50px;
+        }
+
+        video {
+            width: 80%;
+            max-width: 800px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="gallery">
+        <h1>PARA SAYO MYLA KO!</h1>
+        <div class="flower">&#127802;</div>
+        <p>sakin ka nalang kasi.</p>
+        <div id="scroll-down">&#9660; Scroll Down &#9660;</div>
+    </div>
+
+    <div id="video-container">
+        <h2>Ako nalang kasi</h2>
+        <video controls>
+            <source src="videomyla.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+
+    <script>
+        // Add scroll functionality to move to the video section
+        document.getElementById('scroll-down').addEventListener('click', function () {
+            document.getElementById('video-container').scrollIntoView({ behavior: 'smooth' });
+        });
+    </script>
+</body>
+
+</html>
